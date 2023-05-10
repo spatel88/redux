@@ -14,6 +14,7 @@ export class CounterOutputComponent implements OnInit {
   constructor(private store:Store<{ counter: CounterState }>) {}
 
   ngOnInit(): void {
+    console.log("constructor call from channel output");
     this.store.select('counter').subscribe(data => {
         this.counter = data.counter;
     });
