@@ -1,6 +1,7 @@
 import { createReducer, on } from "@ngrx/store";
 import * as counterActions from "./counter.actions";
 import { initialState } from "./counter.state";
+import { state } from "@angular/animations";
 
 export const counterReducer = createReducer(
     initialState,
@@ -18,6 +19,16 @@ export const counterReducer = createReducer(
         return{
             ...state,
             counter: 0,
+        };
+    }), on(counterActions.customIncrement,(state,action) => {
+        return{
+            ...state,
+            counter: state.counter + action.count,
+        }
+    }), on(counterActions.nameChange,(state) => {
+        return{
+            ...state,
+            channelName: "modified channel name",
         };
     })
 
