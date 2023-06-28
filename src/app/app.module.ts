@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
-import { environment } from 'src/environments/environment';
+import { appReducer } from './store/app.state';
 
 @NgModule({
   declarations: [
@@ -24,13 +24,13 @@ import { environment } from 'src/environments/environment';
     CutomCounterInputComponent,
     HomeComponent,
     HeaderComponent,
-    PostsListComponent
+    PostsListComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    StoreModule.forRoot({counter: counterReducer}),
+    StoreModule.forRoot(appReducer),
     // StoreDevtoolsModule.instrument({
     //   logOnly: environment.production,
     // }),

@@ -3,7 +3,7 @@ export interface CounterState{
     channelName: string;
 }
 
-export const initialState = {
+export const initialState: CounterState = {
     counter:0,
     channelName: "shrey channel"
 }
