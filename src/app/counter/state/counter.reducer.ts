@@ -19,6 +19,16 @@ export const counterReducer = createReducer(
             ...state,
             counter: 0,
         };
+    }), on(counterActions.customIncrement,(state,action) => {
+        return{
+            ...state,
+            counter: state.counter + action.count,
+        }
+    }), on(counterActions.nameChange,(state) => {
+        return{
+            ...state,
+            channelName: "modified channel name",
+        };
     })
 
 );
