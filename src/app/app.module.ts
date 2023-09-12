@@ -16,6 +16,7 @@ import { PostsListComponent } from './posts/posts-list/posts-list.component';
 import { appReducer } from './store/app.state';
 import { AddPostComponent } from './posts/add-post/add-post.component';
 import { PostDirectiveDirective } from './post-directive.directive';
+import { EditPostComponent } from './posts/edit-post/edit-post.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { PostDirectiveDirective } from './post-directive.directive';
     PostsListComponent,
     AddPostComponent,
     PostDirectiveDirective,
+    EditPostComponent,
   ],
   imports: [
     BrowserModule,
